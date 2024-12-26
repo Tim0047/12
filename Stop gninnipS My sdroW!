@@ -1,0 +1,19 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+string spinWords(string text){
+  istringstream iss(text);
+  string r,word;
+  
+  while(iss >> word){
+    if(word.length() >= 5){
+    reverse (word.begin(),word.end());
+    r += word + " ";  
+    }else{
+    r += word + " ";  
+    }
+  }
+  r.pop_back();
+  return r;
+}
